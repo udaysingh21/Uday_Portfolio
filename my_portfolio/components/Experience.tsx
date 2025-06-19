@@ -46,7 +46,7 @@ const Experience = () => {
          Career 💼
         </h2>
 
-        <div className="relative border-l-2 border-gray-300 pl-6 space-y-10">
+        <div className="relative border-l-2 border-gray-300 pl-9 space-y-10">
           {experienceData.map((item, index) => (
             <div
               key={index}
@@ -55,22 +55,24 @@ const Experience = () => {
               data-aos-delay={item.delay}
             >
               {/* Dot on timeline */}
-              <span className="absolute -left-[33px] top-3 w-4 h-4 bg-white border-4 border-black rounded-full z-10" />
+              <span className="absolute -left-[45px] top-3 w-4 h-4 bg-white border-4 border-black rounded-full z-15" />
 
               {/* Experience Card */}
-              <Card className={`shadow-md ${item.color}`}>
-                <CardHeader>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
-                  <CardDescription>{item.sub}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    {item.desc.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+                <Card className={`shadow-md ${item.color}`}>
+                    <CardHeader>
+                    <CardTitle className="text-xl">{item.title}</CardTitle>
+                    <CardDescription>{item.sub}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                        {item.desc.map((point, i) => (
+                        <li key={i}>{point}</li>
+                        ))}
+                    </ul>
+                    </CardContent>
+                </Card>
+            </div>
             </div>
           ))}
         </div>

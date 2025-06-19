@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Virtual Medical Home",
     tech: "SpringBoot • React",
-    description: "An online healthcare system designed to deliver medical services to both urban and remote areas. Built to address doctor shortages, limited facilities, and the absence of digital patient records.",
+    description: "An online healthcare system designed to deliver medical services to both urban and remote areas.",
     repo: "https://github.com/DevikaShetty99/VirtualMedicalHub",
     image: "./vmh.jpg",
   },
@@ -149,28 +149,30 @@ const Projects = () => {
                   visibleCount === 1 ? 'w-full' : 'w-1/2'
                 }`}
               >
-                <Card className="h-full shadow hover:shadow-lg transition overflow-hidden">
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.tech}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-700">{project.description}</p>
-                    <Button asChild variant="outline">
-                      <a href={project.repo} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" />
-                        View Code
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
+                <div className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                  <Card className="h-full shadow hover:shadow-lg transition overflow-hidden">
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>{project.tech}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-gray-700">{project.description}</p>
+                      <Button asChild variant="outline">
+                        <a href={project.repo} target="_blank" rel="noopener noreferrer">
+                          <Github className="mr-2 h-4 w-4" />
+                          View Code
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             ))}
           </div>

@@ -134,7 +134,7 @@ const Blog = () => {
               {blogs.map((blog) => (
                 <Card
                   key={blog.id}
-                  className="flex-shrink-0 group hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-200"
+                  className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl group relative flex-shrink-0"
                   style={{ width: `calc(50% - 12px)` }}
                 >
                   <div className="relative h-40 overflow-hidden rounded-t-lg">

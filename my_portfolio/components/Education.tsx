@@ -66,7 +66,7 @@ const Education = () => {
                 <span className="absolute left-[-15px] top-3 w-4 h-4 rounded-full bg-white border-4 border-blue-500 rounded-full z-10" />
 
                 {/* Content */}
-                <Card className="w-full shadow-sm ml-6">
+                <Card className="w-full shadow-sm ml-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex flex-row items-center gap-4">
                     {item.icon}
                     <div>
