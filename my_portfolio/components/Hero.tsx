@@ -160,7 +160,7 @@ const Hero = () => {
             src="/profile.jpg"
             alt="Uday Profile"
             fill
-            sizes=""
+            sizes="(max-width: 768px) 200px, (max-width: 1024px) 300px, 400px"
             className="rounded-full border shadow-md object-cover"
           />
         </div>
