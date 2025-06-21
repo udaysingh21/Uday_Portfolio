@@ -82,7 +82,7 @@ const Hero = () => {
             {greetings[currentGreeting].text}
           </span>
         </h1>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight whitespace-nowrap">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
           I'm Uday Vikram Singh 👋
         </h1>
         <p className="text-lg md:text-xl text-gray-700">
@@ -160,6 +160,7 @@ const Hero = () => {
             src="/profile.jpg"
             alt="Uday Profile"
             fill
+            sizes=""
             className="rounded-full border shadow-md object-cover"
           />
         </div>
